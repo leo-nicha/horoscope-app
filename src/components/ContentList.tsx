@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 const ContentList: React.FC = () => {
   const items = [
-    { title: 'Tarot', subtitle: 'MPG', imageUrl: 'https://placehold.co/140x110/e0f2fe/0c4a6e?text=CQ9+Game' },
+    { title: 'ดูดวงรายวัน', subtitle: 'MPG', imageUrl: 'https://placehold.co/140x110/e0f2fe/0c4a6e?text=CQ9+Game' },
     { title: 'JDB', subtitle: 'MPG', imageUrl: 'https://placehold.co/140x110/ecfdf5/065f46?text=JDB+Game' },
     { title: 'JILI', subtitle: 'MPG', imageUrl: 'https://placehold.co/140x110/fefce8/713f12?text=JILI+Game' },
     { title: 'PNG', subtitle: 'MPG', imageUrl: 'https://placehold.co/140x110/fef2f2/991b1b?text=PNG+Game' },
@@ -14,8 +14,8 @@ const ContentList: React.FC = () => {
   // ✅ Handler เมื่อกดแต่ละการ์ด
   const navigate = useNavigate();
   const handleItemClick = (title: string) => {
-    if (title === 'Tarot')
-    navigate(`/dairytarot`)
+    if (title === 'ดูดวงรายวัน')
+    navigate(`/tarot`)
   };
 
   return (
