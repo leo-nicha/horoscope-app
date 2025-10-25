@@ -30,11 +30,11 @@ const SideNav: React.FC = () => {
   return (
     <nav className="w-24 mt-2 bg-gray-100 shrink-0 p-2 border-r border-gray-200">
       <div className="flex flex-col items-center space-y-1">
-        <SideNavItem icon={<Gift />} label="Promotion" />
+        <SideNavItem icon={<Gift />} label="ไพ่ยิปซี" active={true}/>
         <SideNavItem icon={<Smartphone />} label="Mobile" />
         <SideNavItem icon={<LayoutGrid />} label="Slots" />
         <SideNavItem icon={<Target />} label="Lottery" />
-        <SideNavItem icon={<PlayCircle />} label="MPG" active={true} />
+        <SideNavItem icon={<PlayCircle />} label="MPG"  />
         <SideNavItem icon={<Home />} label="" />
       </div>
     </nav>
