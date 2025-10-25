@@ -1,29 +1,29 @@
 import React, { useState, useCallback } from "react";
-import { RefreshCcw, Loader2, ChevronLeftIcon, Briefcase } from "lucide-react";
+import { RefreshCcw, Loader2, ChevronLeftIcon, Stethoscope } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import CardDisplay from "../cards/CardDisplay";
 
 const BASE_URL = "https://tarot-api-lyart.vercel.app";
 const ALL_CARDS_URL = `${BASE_URL}/tarot_deck_78.json`;
 
-interface WorkCardData {
+interface HealthCardData {
   name: string;
   image?: string;
   meaning_up: string;
-  work_desc?: {
-    point?: string;
-    working?: string;
-    warning?: string;
+  health_desc?: {
+    symptom?: string;
+    health?: string;
+    body?: string;
   };
 }
 
-const TarotWork: React.FC = () => {
+const TarotHealth: React.FC = () => {
   const navigate = useNavigate();
-  const [card, setCard] = useState<WorkCardData | null>(null);
+  const [card, setCard] = useState<HealthCardData | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const fetchWorkCard = useCallback(async () => {
+  const fetchHealthCard = useCallback(async () => {
     setLoading(true);
     setError(null);
     setCard(null);
@@ -53,45 +53,45 @@ const TarotWork: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-linear-to-b from-amber-50 to-white flex flex-col items-center p-4 font-sans">
-      {/* ปุ่มกลับหน้าแรก */}
+    <div className="min-h-screen bg-linear-to-b from-green-50 to-white flex flex-col items-center p-4 font-sans">
+      {/* กลับหน้าแรก */}
       <div className="w-full max-w-md px-4 absolute top-4">
         <div
           onClick={() => navigate("/")}
-          className="w-8 h-8 flex items-center justify-center rounded-full bg-white/60 cursor-pointer hover:bg-amber-100 transition"
+          className="w-8 h-8 flex items-center justify-center rounded-full bg-white/60 cursor-pointer hover:bg-green-100 transition"
         >
-          <ChevronLeftIcon className="h-5 w-5 text-amber-700" />
+          <ChevronLeftIcon className="h-5 w-5 text-green-700" />
         </div>
       </div>
 
       {/* Header */}
       <header className="text-center mt-10 mb-6 w-full">
-        <h1 className="text-3xl font-extrabold text-amber-700 font-serif flex justify-center items-center gap-2">
-          <Briefcase className="text-amber-600 w-6 h-6" />
-          ไพ่ทำนายการงาน
+        <h1 className="text-3xl font-extrabold text-green-700 font-serif flex justify-center items-center gap-2">
+          <Stethoscope className="text-green-600 w-6 h-6" />
+          ไพ่ทำนายสุขภาพ
         </h1>
-        <p className="text-sm text-amber-500">สุ่มไพ่ Major Arcana เพื่อทำนายด้านอาชีพและงาน</p>
+        <p className="text-sm text-green-500">สุ่มไพ่ Major Arcana เพื่อทำนายด้านสุขภาพ</p>
       </header>
 
       {/* ปุ่มสุ่ม */}
       <button
-        onClick={fetchWorkCard}
+        onClick={fetchHealthCard}
         disabled={loading}
         className={`flex items-center justify-center w-full max-w-xs px-6 py-3 mb-6 rounded-full text-base font-bold transition-all duration-300 shadow-md active:scale-95 ${
           loading
-            ? "bg-amber-300 cursor-not-allowed"
-            : "bg-amber-600 text-white hover:bg-amber-700"
+            ? "bg-green-300 cursor-not-allowed"
+            : "bg-green-600 text-white hover:bg-green-700"
         }`}
       >
         {loading ? (
           <>
             <Loader2 className="w-5 h-5 mr-2 animate-spin" />
-            ไพ่กำลังเปิดเส้นทางอาชีพของคุณ...
+            ไพ่กำลังเผยสุขภาพของคุณ...
           </>
         ) : (
           <>
             <RefreshCcw className="w-5 h-5 mr-2" />
-            สุ่มไพ่การงานของคุณ
+            สุ่มไพ่สุขภาพของคุณ
           </>
         )}
       </button>
@@ -105,17 +105,17 @@ const TarotWork: React.FC = () => {
         )}
 
         {!loading && !error && card && (
-          <CardDisplay card={card} mode="work" />
+          <CardDisplay card={card} mode="health" />
         )}
       </main>
 
       {!card && !loading && !error && (
-        <div className="text-center p-6 bg-amber-50 rounded-xl border border-amber-200 mt-6 max-w-xs">
-          <p className="text-base text-amber-700">กด “สุ่มไพ่การงาน” เพื่อเริ่มต้น</p>
+        <div className="text-center p-6 bg-green-50 rounded-xl border border-green-200 mt-6 max-w-xs">
+          <p className="text-base text-green-700">กด “สุ่มไพ่สุขภาพ” เพื่อเริ่มต้น</p>
         </div>
       )}
     </div>
   );
 };
 
-export default TarotWork;
+export default TarotHealth;
