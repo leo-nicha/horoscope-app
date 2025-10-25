@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from "react";
 import { RefreshCcw, Loader2, ChevronLeftIcon } from "lucide-react";
-import CardDisplay from "./CardDisplay";
+import CardDisplay from "../cards/CardDisplay";
 import { useNavigate } from "react-router-dom";
 
 const BASE_URL = "https://tarot-api-lyart.vercel.app";
@@ -13,7 +13,7 @@ interface CardData {
   desc: string;
 }
 
-const TarotRandomizer: React.FC = () => {
+const DailyTarot: React.FC = () => {
   const navigate = useNavigate();
   const [card, setCard] = useState<CardData | null>(null);
   const [loading, setLoading] = useState(false);
@@ -67,7 +67,7 @@ const TarotRandomizer: React.FC = () => {
         <div className="w-8 h-8 flex items-center justify-center rounded-full bg-white/50">
           <ChevronLeftIcon
             onClick={() => navigate("/")}
-            className="h-5 w-5 text-gray-800" /> 
+            className="h-5 w-5 text-gray-800" />
         </div>
       </div>
       {/* Header */}
@@ -119,4 +119,4 @@ const TarotRandomizer: React.FC = () => {
   );
 };
 
-export default TarotRandomizer;
+export default DailyTarot;

@@ -1,6 +1,7 @@
 import React, { useState, useCallback } from "react";
 import { RefreshCcw, Loader2, ChevronLeftIcon, Heart } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import CardDisplay from "../cards/CardDisplay";
 
 const BASE_URL = "https://tarot-api-lyart.vercel.app";
 const ALL_CARDS_URL = `${BASE_URL}/tarot_deck_78.json`;
@@ -9,7 +10,7 @@ interface LoveCardData {
   name: string;
   image?: string;
   meaning_up: string;
-  lovedesc?: {
+  love_desc?: {
     main: string;
     singles: string;
     couples: string;
@@ -76,11 +77,10 @@ const TarotLove: React.FC = () => {
       <button
         onClick={fetchLoveCard}
         disabled={loading}
-        className={`flex items-center justify-center w-full max-w-xs px-6 py-3 mb-6 rounded-full text-base font-bold transition-all duration-300 shadow-md active:scale-95 ${
-          loading
+        className={`flex items-center justify-center w-full max-w-xs px-6 py-3 mb-6 rounded-full text-base font-bold transition-all duration-300 shadow-md active:scale-95 ${loading
             ? "bg-pink-300 cursor-not-allowed"
             : "bg-pink-600 text-white hover:bg-pink-700"
-        }`}
+          }`}
       >
         {loading ? (
           <>
@@ -90,7 +90,7 @@ const TarotLove: React.FC = () => {
         ) : (
           <>
             <RefreshCcw className="w-5 h-5 mr-2" />
-            สุ่มไพ่ความรักของคุณ 💞
+            สุ่มไพ่ความรักของคุณ
           </>
         )}
       </button>
@@ -104,61 +104,7 @@ const TarotLove: React.FC = () => {
         )}
 
         {!loading && !error && card && (
-          <div className="bg-white shadow-xl rounded-2xl p-4 flex flex-col items-center w-full max-w-md animate-fadeIn">
-            {/* รูปไพ่ */}
-            <div className="w-56 aspect-3/5 rounded-xl overflow-hidden border-4 border-pink-100 shadow-md">
-              <img
-                src={
-                  card.image && card.image.trim() !== ""
-                    ? card.image
-                    : `https://placehold.co/300x500/9D174D/FFF?text=${encodeURIComponent(
-                        card.name || "Tarot"
-                      )}`
-                }
-                alt={`ไพ่ ${card.name}`}
-                className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-              />
-            </div>
-
-            {/* ชื่อไพ่ */}
-            <h2 className="text-center mt-4 text-2xl font-serif font-bold text-pink-700">
-              {card.name}
-            </h2>
-
-            {/* ความหมายหลัก */}
-            <div className="mt-4 w-full">
-              <h3 className="text-lg font-semibold text-gray-800 mb-2 border-b pb-1">
-                💫 ความหมายหลัก
-              </h3>
-              <p className="text-gray-700 leading-relaxed text-sm bg-pink-50 p-3 rounded-lg border border-pink-200 italic">
-                {card.meaning_up}
-              </p>
-            </div>
-
-            {/* คำทำนายรวม */}
-            <div className="mt-4 w-full">
-              <h3 className="text-lg font-semibold text-pink-700 mb-2 border-b pb-1">
-                ❤️ คำทำนายด้านความรัก
-              </h3>
-              <p className="text-gray-700 leading-relaxed text-sm">{card.lovedesc?.main || "ไม่มีข้อมูล"}</p>
-            </div>
-
-            {/* สำหรับคนโสด */}
-            <div className="mt-4 w-full">
-              <h3 className="text-lg font-semibold text-pink-700 mb-2 border-b pb-1">
-                💕 สำหรับคนโสด
-              </h3>
-              <p className="text-gray-700 leading-relaxed text-sm">{card.lovedesc?.singles || "ไม่มีข้อมูล"}</p>
-            </div>
-
-            {/* สำหรับคนมีคู่ */}
-            <div className="mt-4 w-full mb-6">
-              <h3 className="text-lg font-semibold text-pink-700 mb-2 border-b pb-1">
-                💞 สำหรับคนมีคู่
-              </h3>
-              <p className="text-gray-700 leading-relaxed text-sm">{card.lovedesc?.couples || "ไม่มีข้อมูล"}</p>
-            </div>
-          </div>
+          <CardDisplay card={card} mode="love" />
         )}
       </main>
 

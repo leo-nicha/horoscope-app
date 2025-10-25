@@ -4,12 +4,12 @@ import { useNavigate } from "react-router-dom";
 
 const ContentList: React.FC = () => {
   const items = [
-    { title: 'ดูดวงรายวัน', subtitle: 'ไพ่ยิปซี', imageUrl: 'https://placehold.co/140x110/e0f2fe/0c4a6e' },
-    { title: 'ดูดวงความรัก', subtitle: 'ไพ่ยิปซี', imageUrl: 'https://placehold.co/140x110/ecfdf5/065f46' },
-    { title: 'ดูดวงการงาน', subtitle: 'ไพ่ยิปซี', imageUrl: 'https://placehold.co/140x110/fefce8/713f12' },
-    { title: 'ดูดวงการเรียน', subtitle: 'ไพ่ยิปซี', imageUrl: 'https://placehold.co/140x110/fef2f2/991b1b' },
-    { title: 'ดูดวงการเงิน', subtitle: 'ไพ่ยิปซี', imageUrl: 'https://placehold.co/140x110/f5f3ff/4c1d95' },
-    { title: 'ดูดวงสุขภาพ', subtitle: 'ไพ่ยิปซี', imageUrl: 'https://placehold.co/140x110/f5f3ff/4c1d95' },
+    { title: 'ดูดวงรายวัน', subtitle: 'ไพ่ยิปซี', imageUrl: '/dailytarot.jpg' },
+    { title: 'ดูดวงความรัก', subtitle: 'ไพ่ยิปซี', imageUrl: '/lovetarot.jpg' },
+    { title: 'ดูดวงการงาน', subtitle: 'ไพ่ยิปซี', imageUrl: '/worktarot.jpg' },
+    { title: 'ดูดวงการเรียน', subtitle: 'ไพ่ยิปซี', imageUrl: '/studytarot.jpg' },
+    { title: 'ดูดวงการเงิน', subtitle: 'ไพ่ยิปซี', imageUrl: '/moneytarot.jpg' },
+    { title: 'ดูดวงสุขภาพ', subtitle: 'ไพ่ยิปซี', imageUrl: '/healthtarot.jpg' },
   ];
 
   // ✅ Handler เมื่อกดแต่ละการ์ด
