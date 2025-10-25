@@ -30,7 +30,7 @@ const ContentList: React.FC = () => {
   };
 
   return (
-    <div className="flex-1 mt-2 bg-gray-100 p-2 overflow-y-auto">
+    <div className="flex-1 bg-gray-100 p-2">
       {items.map((item) => (
         <ContentItem
           key={item.title}
