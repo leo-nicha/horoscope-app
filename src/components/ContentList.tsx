@@ -4,28 +4,28 @@ import { useNavigate } from "react-router-dom";
 
 const ContentList: React.FC = () => {
   const items = [
-    { title: 'ดูดวงรายวัน', subtitle: 'ไพ่ยิปซี', imageUrl: '/dailytarot.jpg' },
-    { title: 'ดูดวงความรัก', subtitle: 'ไพ่ยิปซี', imageUrl: '/lovetarot.jpg' },
-    { title: 'ดูดวงการงาน', subtitle: 'ไพ่ยิปซี', imageUrl: '/worktarot.jpg' },
-    { title: 'ดูดวงการเรียน', subtitle: 'ไพ่ยิปซี', imageUrl: '/studytarot.jpg' },
-    { title: 'ดูดวงการเงิน', subtitle: 'ไพ่ยิปซี', imageUrl: '/moneytarot.jpg' },
-    { title: 'ดูดวงสุขภาพ', subtitle: 'ไพ่ยิปซี', imageUrl: '/healthtarot.jpg' },
+    { title: 'ดวงรายวัน', subtitle: 'ดูดวงไพ่ยิปซี', imageUrl: '/dailytarot.jpg' },
+    { title: 'ความรัก', subtitle: 'ดูดวงไพ่ยิปซี', imageUrl: '/lovetarot.jpg' },
+    { title: 'การงาน', subtitle: 'ดูดวงไพ่ยิปซี', imageUrl: '/worktarot.jpg' },
+    { title: 'การเรียน', subtitle: 'ดูดวงไพ่ยิปซี', imageUrl: '/studytarot.jpg' },
+    { title: 'การเงิน', subtitle: 'ดูดวงไพ่ยิปซี', imageUrl: '/moneytarot.jpg' },
+    { title: 'สุขภาพ', subtitle: 'ดูดวงไพ่ยิปซี', imageUrl: '/healthtarot.jpg' },
   ];
 
   // ✅ Handler เมื่อกดแต่ละการ์ด
   const navigate = useNavigate();
   const handleItemClick = (title: string) => {
-    if (title === 'ดูดวงรายวัน')
+    if (title === 'ดวงรายวัน')
       navigate(`/dailytarot`)
-    if (title === 'ดูดวงความรัก')
+    if (title === 'ความรัก')
       navigate(`/lovetarot`)
-    if (title === 'ดูดวงการงาน')
+    if (title === 'การงาน')
       navigate(`/worktarot`)
-    if (title === 'ดูดวงการเรียน')
+    if (title === 'การเรียน')
       navigate(`/studytarot`)
-    if (title === 'ดูดวงการเงิน')
+    if (title === 'การเงิน')
       navigate(`/moneytarot`)
-    if (title === 'ดูดวงสุขภาพ')
+    if (title === 'สุขภาพ')
       navigate(`/healthtarot`)
   };
 
