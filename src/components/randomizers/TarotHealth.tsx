@@ -91,7 +91,7 @@ const TarotHealth: React.FC = () => {
         ) : (
           <>
             <RefreshCcw className="w-5 h-5 mr-2" />
-            สุ่มไพ่สุขภาพของคุณ
+            เปิดไพ่สุขภาพของคุณ
           </>
         )}
       </button>
@@ -111,7 +111,8 @@ const TarotHealth: React.FC = () => {
 
       {!card && !loading && !error && (
         <div className="text-center p-6 bg-green-50 rounded-xl border border-green-200 mt-6 max-w-xs">
-          <p className="text-base text-green-700">กด “สุ่มไพ่สุขภาพ” เพื่อเริ่มต้น</p>
+          <p className="text-base text-green-700">ไพ่ทาโรต์เชื่อมโยงกับดวงชะตาของคุณ</p>
+          <p className="text-base text-green-700">โปรดตั้งจิตก่อนกดเปิดไพ่</p>
         </div>
       )}
     </div>

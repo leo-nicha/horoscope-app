@@ -92,7 +92,7 @@ const TarotStudy: React.FC = () => {
         ) : (
           <>
             <RefreshCcw className="w-5 h-5 mr-2" />
-            สุ่มไพ่การเรียนของคุณ
+            เปิดไพ่การเรียนของคุณ
           </>
         )}
       </button>
@@ -112,7 +112,8 @@ const TarotStudy: React.FC = () => {
 
       {!card && !loading && !error && (
         <div className="text-center p-6 bg-blue-50 rounded-xl border border-blue-200 mt-6 max-w-xs">
-          <p className="text-base text-blue-700">กด “สุ่มไพ่การเรียน” เพื่อเริ่มต้น</p>
+          <p className="text-base text-blue-700">ไพ่ทาโรต์เชื่อมโยงกับดวงชะตาของคุณ</p>
+          <p className="text-base text-blue-700">โปรดตั้งจิตก่อนกดเปิดไพ่</p>
         </div>
       )}
     </div>

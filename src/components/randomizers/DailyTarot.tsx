@@ -73,9 +73,9 @@ const DailyTarot: React.FC = () => {
       {/* Header */}
       <header className="text-center mt-10 mb-6 w-full">
         <h1 className="text-3xl font-extrabold text-indigo-900 font-serif">
-          ดูดวงรายวันด้วยไพ่ยิปซี
+          ดูดวงรายวันด้วยไพ่ทาโรต์
         </h1>
-        <p className="text-sm text-gray-500">สุ่มไพ่ยิปซี 1 ใบจากสำรับ 78 ใบ</p>
+        <p className="text-sm text-gray-500">สุ่มไพ่ทาโรต์ 1 ใบจากสำรับ 78 ใบ</p>
       </header>
 
       {/* ปุ่มสุ่มไพ่ */}
@@ -95,7 +95,7 @@ const DailyTarot: React.FC = () => {
         ) : (
           <>
             <RefreshCcw className="w-5 h-5 mr-2" />
-            เลือกไพ่ของคุณในวันนี้
+            เปิดไพ่ของคุณในวันนี้
           </>
         )}
       </button>
@@ -112,7 +112,8 @@ const DailyTarot: React.FC = () => {
 
       {!card && !loading && !error && (
         <div className="text-center p-6 bg-indigo-50 rounded-xl border border-indigo-200 mt-6 max-w-xs">
-          <p className="text-base text-indigo-700">กดปุ่ม “สุ่มไพ่ใหม่” เพื่อเริ่มต้น</p>
+          <p className="text-base text-indigo-700">ไพ่ทาโรต์เชื่อมโยงกับดวงชะตาของคุณ</p>
+          <p className="text-base text-indigo-700">โปรดตั้งจิตก่อนกดเปิดไพ่</p>
         </div>
       )}
     </div>

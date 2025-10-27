@@ -92,7 +92,7 @@ const TarotMoney: React.FC = () => {
         ) : (
           <>
             <RefreshCcw className="w-5 h-5 mr-2" />
-            สุ่มไพ่การเงินของคุณ
+            เปิดไพ่การเงินของคุณ
           </>
         )}
       </button>
@@ -112,7 +112,8 @@ const TarotMoney: React.FC = () => {
 
       {!card && !loading && !error && (
         <div className="text-center p-6 bg-yellow-50 rounded-xl border border-yellow-200 mt-6 max-w-xs">
-          <p className="text-base text-yellow-700">กด “สุ่มไพ่การเงิน” เพื่อเริ่มต้น</p>
+          <p className="text-base text-yellow-700">ไพ่ทาโรต์เชื่อมโยงกับดวงชะตาของคุณ</p>
+          <p className="text-base text-yellow-700">โปรดตั้งจิตก่อนกดเปิดไพ่</p>
         </div>
       )}
     </div>

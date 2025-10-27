@@ -4,12 +4,12 @@ import { useNavigate } from "react-router-dom";
 
 const ContentList: React.FC = () => {
   const items = [
-    { title: 'ดวงรายวัน', subtitle: 'ดูดวงไพ่ยิปซี', imageUrl: '/dailytarot.jpg' },
-    { title: 'ความรัก', subtitle: 'ดูดวงไพ่ยิปซี', imageUrl: '/lovetarot.jpg' },
-    { title: 'การงาน', subtitle: 'ดูดวงไพ่ยิปซี', imageUrl: '/worktarot.jpg' },
-    { title: 'การเรียน', subtitle: 'ดูดวงไพ่ยิปซี', imageUrl: '/studytarot.jpg' },
-    { title: 'การเงิน', subtitle: 'ดูดวงไพ่ยิปซี', imageUrl: '/moneytarot.jpg' },
-    { title: 'สุขภาพ', subtitle: 'ดูดวงไพ่ยิปซี', imageUrl: '/healthtarot.jpg' },
+    { title: 'ดวงรายวัน', subtitle: 'ดูดวงไพ่ทาโรต์', imageUrl: '/dailytarot.jpg' },
+    { title: 'ความรัก', subtitle: 'ดูดวงไพ่ทาโรต์', imageUrl: '/lovetarot.jpg' },
+    { title: 'การงาน', subtitle: 'ดูดวงไพ่ทาโรต์', imageUrl: '/worktarot.jpg' },
+    { title: 'การเรียน', subtitle: 'ดูดวงไพ่ทาโรต์', imageUrl: '/studytarot.jpg' },
+    { title: 'การเงิน', subtitle: 'ดูดวงไพ่ทาโรต์', imageUrl: '/moneytarot.jpg' },
+    { title: 'สุขภาพ', subtitle: 'ดูดวงไพ่ทาโรต์', imageUrl: '/healthtarot.jpg' },
   ];
 
   // ✅ Handler เมื่อกดแต่ละการ์ด

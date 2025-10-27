@@ -90,7 +90,7 @@ const TarotLove: React.FC = () => {
         ) : (
           <>
             <RefreshCcw className="w-5 h-5 mr-2" />
-            สุ่มไพ่ความรักของคุณ
+            เปิดไพ่ความรักของคุณ
           </>
         )}
       </button>
@@ -110,7 +110,8 @@ const TarotLove: React.FC = () => {
 
       {!card && !loading && !error && (
         <div className="text-center p-6 bg-pink-50 rounded-xl border border-pink-200 mt-6 max-w-xs">
-          <p className="text-base text-pink-700">กด “สุ่มไพ่ความรัก” เพื่อเริ่มต้น</p>
+          <p className="text-base text-pink-700">ไพ่ทาโรต์เชื่อมโยงกับดวงชะตาของคุณ</p>
+          <p className="text-base text-pink-700">โปรดตั้งจิตก่อนกดเปิดไพ่</p>
         </div>
       )}
     </div>

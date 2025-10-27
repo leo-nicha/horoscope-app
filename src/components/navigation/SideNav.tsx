@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { Gift, Smartphone, LayoutGrid, Target } from "lucide-react";
+import {  Target, Moon, Clover, CalendarDays } from "lucide-react";
 import ContentList from "../ContentList";
 import SideNavItem from "./SideNavItem";
 import CalanderList from "../CalanderList";
+import FortuneList from "../FortuneList";
 
 const SideNav: React.FC = () => {
   const [activeTab, setActiveTab] = useState("tarot");
@@ -14,28 +15,29 @@ const SideNav: React.FC = () => {
       >
         <div className="flex flex-col items-center space-y-1">
           <SideNavItem
-            icon={<Gift />}
-            label="ไพ่ยิปซี"
+            icon={<Moon />}
+            label="ไพ่ทาโรต์"
             active={activeTab === "tarot"}
             onClick={() => setActiveTab("tarot")}
           />
           <SideNavItem
-            icon={<Smartphone />}
+            icon={<Clover />}
+            label="เสี่ยงทาย"
+            active={activeTab === "fortune"}
+            onClick={() => setActiveTab("fortune")}
+          />
+          <SideNavItem
+            icon={<CalendarDays />}
             label="ปฏิทิน"
             active={activeTab === "calendar"}
             onClick={() => setActiveTab("calendar")}
           />
-          <SideNavItem
-            icon={<LayoutGrid />}
-            label="Game"
-            active={activeTab === "game"}
-            onClick={() => setActiveTab("game")}
-          />
+
           <SideNavItem
             icon={<Target />}
-            label="Luck"
-            active={activeTab === "luck"}
-            onClick={() => setActiveTab("luck")}
+            label="เร็วๆ นี้"
+            active={activeTab === "โชคลาภ"}
+            onClick={() => setActiveTab("โชคลาภ")}
           />
         </div>
       </nav>
@@ -46,14 +48,11 @@ const SideNav: React.FC = () => {
         {/* ... เนื้อหาด้านในเหมือนเดิม ... */}
         {activeTab === "tarot" && <ContentList />}
 
+        {activeTab === "fortune" && <FortuneList />}
+
         {activeTab === "calendar" && <CalanderList />}
 
-        {activeTab === "game" && (
-          <div className="p-4">
-            <h2 className="text-xl font-bold">เนื้อหา Game</h2>
-            <p>เร็วๆ นี้...</p>
-          </div>
-        )}
+
         {activeTab === "luck" && (
           <div className="p-4">
             <h2 className="text-xl font-bold">เนื้อหา Luck</h2>
