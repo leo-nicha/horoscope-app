@@ -4,12 +4,11 @@ type ContentItemProps = {
   title: string;
   subtitle: string;
   imageUrl: string;
-  onClick?: () => void; // ✅ เพิ่ม onClick
+  onClick?: () => void;
 };
 
 const ContentItem: React.FC<ContentItemProps> = ({ title, subtitle, imageUrl, onClick }) => {
   return (
-    // ✅ เปลี่ยน div เป็น button เพื่อให้ทั้งการ์ดกดได้
     <button
       onClick={onClick}
       className="relative bg-white p-4 h-28 flex flex-col justify-center mb-2 rounded-lg shadow-sm overflow-hidden w-full text-left active:scale-[0.98] transition-transform"

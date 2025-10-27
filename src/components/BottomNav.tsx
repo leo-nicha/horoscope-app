@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home, Tag, DollarSign, Phone, User } from 'lucide-react';
+import { Home, Tag, Phone } from 'lucide-react';
 
 type NavItemProps = {
   icon: React.ReactNode;

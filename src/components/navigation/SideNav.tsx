@@ -42,10 +42,8 @@ const SideNav: React.FC = () => {
         </div>
       </nav>
 
-      {/* ⭐️ 3. ด้านขวา (Content Area) - เว้นระยะห่างด้านซ้ายให้เท่ากับความกว้างของ SideNav */}
-      {/* เพิ่ม padding-left: w-24 (หรือ pl-24) เพื่อหลีกเลี่ยงการทับซ้อนกับ SideNav */}
       <main className="flex-1 overflow-y-auto pl-24">
-        {/* ... เนื้อหาด้านในเหมือนเดิม ... */}
+        
         {activeTab === "tarot" && <ContentList />}
 
         {activeTab === "fortune" && <FortuneList />}

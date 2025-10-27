@@ -9,12 +9,10 @@ import {
   Illumination,
 } from "astronomy-engine";
 
-// === ฟังก์ชันคำนวณจันทรคติไทย ===
 function getAccurateThaiMoon(date: Date) {
   const utc = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
   const time = new AstroTime(utc);
 
-  // หาจุดจันทร์ดับ (new moon) ก่อนหน้าหรือเท่ากับวันนี้
   let mq = SearchMoonQuarter(new AstroTime(new Date(utc.getTime() - 30 * 86400000)));
   let lastNewMoon = mq;
   while (true) {
@@ -55,13 +53,11 @@ const MoonAge: React.FC = () => {
   const [selectedDate, setSelectedDate] = useState(today);
   const [moonData, setMoonData] = useState(getAccurateThaiMoon(today));
 
-  // เมื่อคลิกวันที่ในปฏิทิน
   const handleSelectDate = (date: Date) => {
     setSelectedDate(date);
     setMoonData(getAccurateThaiMoon(date));
   };
 
-  // คำนวณข้อมูลจันทรคติทั้งเดือน
   useEffect(() => {
     if (currentYear < 2000 || currentYear > 2200) return;
     const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
@@ -118,7 +114,6 @@ const MoonAge: React.FC = () => {
         {selectedDate.toLocaleDateString("th-TH", { dateStyle: "full" })}
       </p>
 
-      {/* ===== ปฏิทินรายเดือน ===== */}
       <div className="flex items-center justify-center mb-4">
         <button onClick={handlePrevMonth} className="px-3 py-1 bg-gray-200 rounded-lg mx-1">
           ◀
@@ -144,7 +139,6 @@ const MoonAge: React.FC = () => {
           </div>
         ))}
 
-        {/* ช่องว่างก่อนวันแรกของเดือน */}
         {Array(new Date(currentYear, currentMonth, 1).getDay())
           .fill(null)
           .map((_, idx) => <div key={`empty-${idx}`} />)}
@@ -178,7 +172,6 @@ const MoonAge: React.FC = () => {
         })}
       </div>
 
-      {/* ===== ข้อมูลรายวัน ===== */}
       <div className="bg-white shadow-md rounded-2xl p-4 inline-block">
         <p className="text-lg">
           {" "}

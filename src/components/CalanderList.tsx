@@ -7,11 +7,10 @@ const CalanderList: React.FC = () => {
     { title: 'จันทรคติ', subtitle: 'วันพระ ข้างขึ้น ข้างแรม', imageUrl: '/moonage.png' },
   ];
 
-  // ✅ Handler เมื่อกดแต่ละการ์ด
   const navigate = useNavigate();
   const handleItemClick = (title: string) => {
     if (title === 'จันทรคติ') {
-      navigate('/moonage'); // เปลี่ยนเส้นทางไปยังหน้า MoonAge
+      navigate('/moonage');
     }
   };
 
@@ -23,7 +22,7 @@ const CalanderList: React.FC = () => {
           title={item.title}
           subtitle={item.subtitle}
           imageUrl={item.imageUrl}
-          onClick={() => handleItemClick(item.title)} // ✅ ส่ง callback
+          onClick={() => handleItemClick(item.title)}
         />
       ))}
     </div>

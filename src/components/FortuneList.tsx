@@ -7,7 +7,6 @@ const ContentList: React.FC = () => {
         { title: 'เซียมซี', subtitle: 'เสี่ยงทาย', imageUrl: '/fortunesticks.jpg' },
     ];
 
-    // ✅ Handler เมื่อกดแต่ละการ์ด
     const navigate = useNavigate();
     const handleItemClick = (title: string) => {
         if (title === 'เซียมซี') {
@@ -23,7 +22,7 @@ const ContentList: React.FC = () => {
                     title={item.title}
                     subtitle={item.subtitle}
                     imageUrl={item.imageUrl}
-                    onClick={() => handleItemClick(item.title)} // ✅ ส่ง callback
+                    onClick={() => handleItemClick(item.title)}
                 />
             ))}
         </div>

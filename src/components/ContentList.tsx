@@ -12,7 +12,6 @@ const ContentList: React.FC = () => {
     { title: 'สุขภาพ', subtitle: 'ดูดวงไพ่ทาโรต์', imageUrl: '/healthtarot.jpg' },
   ];
 
-  // ✅ Handler เมื่อกดแต่ละการ์ด
   const navigate = useNavigate();
   const handleItemClick = (title: string) => {
     if (title === 'ดวงรายวัน')
@@ -37,7 +36,7 @@ const ContentList: React.FC = () => {
           title={item.title}
           subtitle={item.subtitle}
           imageUrl={item.imageUrl}
-          onClick={() => handleItemClick(item.title)} // ✅ ส่ง callback
+          onClick={() => handleItemClick(item.title)}
         />
       ))}
     </div>
