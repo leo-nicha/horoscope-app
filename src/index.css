@@ -1,1 +1,7 @@
 @import "tailwindcss";
+
+/* เพิ่ม @keyframes สำหรับ animation ที่ชื่อ 'marquee' */
+@keyframes marquee {
+  0% { transform: translateX(100vw); } /* เริ่มต้นจากขอบจอขวา (100% ของความกว้างจอ) */
+  100% { transform: translateX(-100%); } /* สิ้นสุดที่ขอบจอซ้าย ( -100% ของความกว้าง *ตัวอักษรเอง*) */
+}
