@@ -153,7 +153,7 @@ const FortuneSticks: React.FC = () => {
       </div>
 
       <header className="text-center mt-12 mb-6 w-full">
-        <h1 className="text-3xl font-extrabold text-amber-800 font-serif">
+        <h1 className="text-3xl font-extrabold text-amber-800 font-serif mb-2">
           เซียมซีทำนายโชคชะตา
         </h1>
         <p className="text-sm text-gray-500">เสี่ยงเซียมซี 1 แท่ง จากทั้งหมด 28 แท่ง</p>

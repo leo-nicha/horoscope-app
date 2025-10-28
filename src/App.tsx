@@ -9,6 +9,7 @@ import TarotMoney from './components/randomizers/TarotMoney';
 import TarotHealth from './components/randomizers/TarotHealth';
 import MoonAge from './components/MoonAge';
 import FortuneSticks from './components/randomizers/FortuneSticks';
+import LuckyNumber from './components/randomizers/LuckyNumber';
 
 const App: React.FC = () => {
   return (
@@ -23,6 +24,7 @@ const App: React.FC = () => {
         <Route path="/healthtarot" element={<TarotHealth />} />
         <Route path="/moonage" element={<MoonAge />} />
         <Route path="/fortunesticks" element={<FortuneSticks />} />
+        <Route path="/luckyphone" element={<LuckyNumber />} />
       </Routes>
     </div>
   );
