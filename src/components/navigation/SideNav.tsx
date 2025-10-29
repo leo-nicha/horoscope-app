@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { Moon, Clover, CalendarDays, Star } from "lucide-react";
+import { Moon, Clover, CalendarDays, Star, Fan } from "lucide-react";
 import ContentList from "../ContentList";
 import SideNavItem from "./SideNavItem";
 import CalanderList from "../CalanderList";
 import FortuneList from "../FortuneList";
 import LuckyList from "../LuckyList";
+import ProphecyList from "../ProphecyList";
 
 const SideNav: React.FC = () => {
   const [activeTab, setActiveTab] = useState("tarot");
@@ -34,6 +35,12 @@ const SideNav: React.FC = () => {
             onClick={() => setActiveTab("lucky")}
           />
           <SideNavItem
+            icon={<Fan />}
+            label="พยากรณ์"
+            active={activeTab === "prophecy"}
+            onClick={() => setActiveTab("prophecy")}
+          />
+          <SideNavItem
             icon={<CalendarDays />}
             label="ปฏิทิน"
             active={activeTab === "calendar"}
@@ -49,6 +56,8 @@ const SideNav: React.FC = () => {
         {activeTab === "fortune" && <FortuneList />}
 
         {activeTab === "lucky" && <LuckyList />}
+
+        {activeTab === "prophecy" && <ProphecyList />}
 
         {activeTab === "calendar" && <CalanderList />}
 

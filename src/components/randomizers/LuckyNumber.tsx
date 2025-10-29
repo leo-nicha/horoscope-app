@@ -98,8 +98,8 @@ const LuckyNumber: React.FC = () => {
                     type="text"
                     value={phone}
                     onChange={handleChange}
-                    onFocus={() => setIsFocused(true)}    // เมื่อกด (focus) ให้ placeholder หาย
-                    onBlur={() => setIsFocused(false)}    // เมื่อออกจากช่อง ให้ placeholder กลับมา
+                    onFocus={() => setIsFocused(true)}
+                    onBlur={() => setIsFocused(false)}
                     placeholder={isFocused ? "" : "กรอกหมายเลขโทรศัพท์ (10 หลัก)"}
                     className={`w-full px-4 py-3 border rounded-full text-center text-lg text-gray-800 shadow-sm focus:outline-none focus:ring-2 transition-all ${phone.length === 10 && !phone.startsWith("0")
                             ? "border-red-300 focus:ring-red-300"
