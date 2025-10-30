@@ -25,7 +25,6 @@ const Lucky7Days: React.FC = () => {
     const [result, setResult] = useState<LuckyDayData | null>(null);
     const [error, setError] = useState<string | null>(null);
 
-    // 🎨 สีธีมตามวัน
     const themeColors: Record<string, string> = {
         Sunday: "from-red-100 to-white",
         Monday: "from-yellow-100 to-white",
@@ -119,7 +118,6 @@ const Lucky7Days: React.FC = () => {
                         );
                     }
 
-                    // กล่องปกติ
                     return (
                         <Card
                             key={d.value}

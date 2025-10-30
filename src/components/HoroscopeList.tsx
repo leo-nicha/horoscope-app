@@ -5,12 +5,16 @@ import { useNavigate } from "react-router-dom";
 const ContentList: React.FC = () => {
     const items = [
         { title: 'วันเกิด', subtitle: 'ดูดวง', imageUrl: '/luckydays.jpg' },
+        { title: 'ปีเกิด', subtitle: 'ดูดวง', imageUrl: '/luckycnzodiac.jpg' },
     ];
 
     const navigate = useNavigate();
     const handleItemClick = (title: string) => {
         if (title === 'วันเกิด') {
             navigate(`/luckyday`)
+        }
+                if (title === 'ปีเกิด') {
+            navigate(`/luckycnzodiac`)
         }
     };
 
