@@ -12,7 +12,8 @@ import FortuneSticks from './components/randomizers/FortuneSticks';
 import LuckyNumber from './components/randomizers/LuckyNumber';
 import DreamAnimal from './components/randomizers/DreamAnimal';
 import Lucky7Days from './components/randomizers/Lucky7Days';
-import ChineseZodiac from './components/randomizers/ChineseZodiac';
+import ChineseZodiac from './components/ChineseZodiac';
+import WesternZodiac from './components/WesternZodiac';
 
 const App: React.FC = () => {
   return (
@@ -31,6 +32,7 @@ const App: React.FC = () => {
         <Route path="/dreamanimal" element={<DreamAnimal />} />
         <Route path="/luckyday" element={<Lucky7Days />} />
         <Route path="/luckycnzodiac" element={<ChineseZodiac />} />
+        <Route path="/luckywestzodiac" element={<WesternZodiac />} />
       </Routes>
     </div>
   );

@@ -5,7 +5,8 @@ import { useNavigate } from "react-router-dom";
 const ContentList: React.FC = () => {
     const items = [
         { title: 'วันเกิด', subtitle: 'ดูดวง', imageUrl: '/luckydays.jpg' },
-        { title: 'ปีเกิด', subtitle: 'ดูดวง', imageUrl: '/luckycnzodiac.jpg' },
+        { title: 'ราศี', subtitle: 'ดูดวง', imageUrl: '/luckywestzodiac.jpg' },
+        { title: 'ปีนักษัตร', subtitle: 'ดูดวง', imageUrl: '/luckycnzodiac.jpg' },
     ];
 
     const navigate = useNavigate();
@@ -13,7 +14,10 @@ const ContentList: React.FC = () => {
         if (title === 'วันเกิด') {
             navigate(`/luckyday`)
         }
-                if (title === 'ปีเกิด') {
+        if (title === 'ราศี') {
+            navigate(`/luckywestzodiac`)
+        }
+        if (title === 'ปีนักษัตร') {
             navigate(`/luckycnzodiac`)
         }
     };
