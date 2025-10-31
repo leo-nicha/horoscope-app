@@ -2,15 +2,15 @@ import React, { useEffect, useState, useRef } from "react";
 
 const banners = [
     {
-        image: "/banners/banner1.jpg",
+        image: "/banners/banner1.webp",
         link: "/dailytarot",
     },
     {
-        image: "/banners/banner2.jpg",
+        image: "/banners/banner2.webp",
         link: "/dreamanimal",
     },
     {
-        image: "/banners/banner3.jpg",
+        image: "/banners/banner3.webp",
         link: "/luckywestzodiac",
     },
 ];
@@ -69,13 +69,14 @@ const BannerSlider: React.FC = () => {
                     }}
                 >
                     {slidesToRender.map((banner) => (
-                        <div
+                        <img
                             key={banner.image}
+                            src={banner.image}
+                            alt=""
+                            width={400} 
+                            height={133}
                             onClick={() => handleClick(banner.link)}
-                            className="w-full h-32 sm:h-56 md:h-64 bg-center bg-cover cursor-pointer shrink-0 select-none"
-                            style={{
-                                backgroundImage: `url(${banner.image})`,
-                            }}
+                            className="w-full h-32 sm:h-56 md:h-64 object-cover cursor-pointer shrink-0 select-none"
                         />
                     ))}
                 </div>
