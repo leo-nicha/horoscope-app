@@ -105,7 +105,7 @@ const ChineseZodiac: React.FC = () => {
             `}
             onClick={() => setZodiac(z.key)}
           >
-            <p className="text-2xl mb-1">{z.emoji}</p>
+            <p className="text-5xl">{z.emoji}</p>
             <p className="font-bold text-gray-700">{z.label}</p>
           </Card>
         ))}
