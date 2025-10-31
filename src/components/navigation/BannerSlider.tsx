@@ -2,16 +2,16 @@ import React, { useEffect, useState, useRef } from "react";
 
 const banners = [
     {
-        image: "/banners/banner1.webp",
-        link: "https://horoscope-app-eta-tawny.vercel.app/dailytarot",
+        image: "/banners/banner3_2x.webp",
+        link: "/dailytarot",
     },
     {
-        image: "/banners/banner2.webp",
-        link: "https://horoscope-app-eta-tawny.vercel.app/dreamanimal",
+        image: "/banners/banner2_2x.webp",
+        link: "/dreamanimal",
     },
     {
-        image: "/banners/banner3.webp",
-        link: "https://horoscope-app-eta-tawny.vercel.app/luckywestzodiac",
+        image: "/banners/banner1_2x.webp",
+        link: "/luckywestzodiac",
     },
 ];
 
@@ -53,10 +53,6 @@ const BannerSlider: React.FC = () => {
         }
     }, [currentIndex, isTransitioning]);
 
-    const handleClick = (link: string) => {
-        window.location.href = link;
-    };
-
     return (
         <section className="w-full flex justify-center">
             <div className="w-full max-w-3xl overflow-hidden">
@@ -69,15 +65,20 @@ const BannerSlider: React.FC = () => {
                     }}
                 >
                     {slidesToRender.map((banner) => (
-                        <img
+                        <a
                             key={banner.image}
-                            src={banner.image}
-                            alt=""
-                            width={400} 
-                            height={133}
-                            onClick={() => handleClick(banner.link)}
-                            className="w-full h-32 sm:h-56 md:h-64 object-cover cursor-pointer shrink-0 select-none"
-                        />
+                            href={banner.link}
+                            rel="noopener noreferrer"
+                            className="w-full shrink-0 select-none"
+                        >
+                            <img
+                                src={banner.image}
+                                alt={banner.image}
+                                width={800}
+                                height={266}
+                                className="w-full h-32 sm:h-56 md:h-64 object-cover"
+                            />
+                        </a>
                     ))}
                 </div>
             </div>
