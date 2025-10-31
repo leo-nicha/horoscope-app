@@ -1,4 +1,5 @@
 import React from 'react';
+import BannerSlider from './navigation/BannerSlider';
 
 const Header: React.FC = () => {
   return (
@@ -8,9 +9,8 @@ const Header: React.FC = () => {
         <div></div>
       </nav>
 
-      <div
-        className="h-32 bg-gray-700 bg-cover bg-center flex items-center justify-center text-white"
-        style={{ backgroundImage: "url('https://placehold.co/400x130/333333/ffffff?text=HORO+Banner')" }}>
+      <div>
+        {<BannerSlider />}
       </div>
       <div className="p-2 text-sm text-gray-700 border-b border-gray-200 overflow-hidden">
         {/* - whitespace-nowrap: ไม่ให้ข้อความตกบรรทัด */}

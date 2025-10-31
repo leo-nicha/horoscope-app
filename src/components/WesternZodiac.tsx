@@ -76,7 +76,7 @@ const WesternZodiac: React.FC = () => {
         <div
             className="min-h-screen bg-linear-to-b from-indigo-50 to-white flex flex-col items-center p-4 font-sans relative transition-all duration-700"
             style={{
-                backgroundImage: `url("/zodiac/zodiac_bg.gif")`,
+                backgroundImage: `url("/zodiac/zodiac_bg.jpg")`,
                 backgroundSize: "cover",   
                 backgroundPosition: "center", 
                 backgroundRepeat: "no-repeat",

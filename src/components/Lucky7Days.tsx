@@ -120,8 +120,8 @@ const Lucky7Days: React.FC = () => {
                                 <Card
                                     className={`w-[50%] sm:w-1/3 cursor-pointer text-center p-3 rounded-2xl border-2 transition-all duration-300
               ${day === d.value
-                                            ? "border-yellow-500 bg-yellow-50 shadow-lg scale-105"
-                                            : "border-transparent hover:border-yellow-300"}
+                                            ? `${dayThemes[d.value].border} ${dayThemes[d.value].bg} shadow-lg scale-105`
+                                    : `border-transparent ${dayThemes[d.value].hover}`}
             `}
                                     onClick={() => setDay(d.value)}
                                 >
