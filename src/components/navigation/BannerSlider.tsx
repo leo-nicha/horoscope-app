@@ -3,15 +3,15 @@ import React, { useEffect, useState, useRef } from "react";
 const banners = [
     {
         image: "/banners/banner1.webp",
-        link: "/dailytarot",
+        link: "https://horoscope-app-eta-tawny.vercel.app/dailytarot",
     },
     {
         image: "/banners/banner2.webp",
-        link: "/dreamanimal",
+        link: "https://horoscope-app-eta-tawny.vercel.app/dreamanimal",
     },
     {
         image: "/banners/banner3.webp",
-        link: "/luckywestzodiac",
+        link: "https://horoscope-app-eta-tawny.vercel.app/luckywestzodiac",
     },
 ];
 
