@@ -67,7 +67,7 @@ const BannerSlider: React.FC = () => {
                     {slidesToRender.map((banner) => (
                         <a
                             key={banner.image}
-                            href={banner.link}
+                            // href={banner.link}
                             rel="noopener noreferrer"
                             className="w-full shrink-0 select-none"
                         >
