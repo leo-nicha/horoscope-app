@@ -108,7 +108,7 @@ const DestinyChart: React.FC = () => {
           วิเคราะห์ดวงชะตา
         </h1>
         <p className="text-sm text-gray-500">
-          กรอกข้อมูลเพื่อดูคำทำนายพื้นดวง (API จริง)
+          กรอกข้อมูลเพื่อดูคำทำนายพื้นดวงผูกลัคนา
         </p>
       </header>
 
@@ -132,7 +132,7 @@ const DestinyChart: React.FC = () => {
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
-                วัน/เดือน/ปีเกิด
+                วัน/เดือน/ปีเกิด (กรอกได้ทั้ง พ.ศ. หรือ ค.ศ.)
               </label>
               <input
                 disabled={loading}
@@ -154,6 +154,9 @@ const DestinyChart: React.FC = () => {
                 onChange={(e) => setBirthTime(e.target.value)}
                 className="w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
               />
+              <label className="text-center block text-sm font-medium text-red-500 mt-1">
+                * หากไม่ทราบเวลาเกิด ใส่ฐานเวลาพยากรณ์ 06:00 *
+              </label>
             </div>
           </div>
         </div>
