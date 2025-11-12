@@ -5,12 +5,16 @@ import { useNavigate } from "react-router-dom";
 const LuckyList: React.FC = () => {
     const items = [
         { title: 'เบอร์โทรศัพท์', subtitle: 'เลขมงคง', imageUrl: '/phonenumber.jpg' },
+        { title: 'เลขที่อยู่อาศัย', subtitle: 'เลขมงคง', imageUrl: '/housenumber.jpg' },
     ];
 
     const navigate = useNavigate();
     const handleItemClick = (title: string) => {
         if (title === 'เบอร์โทรศัพท์') {
             navigate(`/luckyphone`)
+        }
+        if (title === 'เลขที่อยู่อาศัย') {
+            navigate(`/luckyhouse`)
         }
     };
 
