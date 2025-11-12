@@ -1,16 +1,16 @@
 import React from 'react';
-import ContentItem from './ContentItem';
+import ContentItem from '../ContentItem';
 import { useNavigate } from "react-router-dom";
 
-const ContentList: React.FC = () => {
+const LuckyList: React.FC = () => {
     const items = [
-        { title: 'เซียมซี', subtitle: 'เสี่ยงทาย', imageUrl: '/fortunesticks.jpg' },
+        { title: 'เบอร์โทรศัพท์', subtitle: 'เลขมงคง', imageUrl: '/phonenumber.jpg' },
     ];
 
     const navigate = useNavigate();
     const handleItemClick = (title: string) => {
-        if (title === 'เซียมซี') {
-            navigate(`/fortunesticks`)
+        if (title === 'เบอร์โทรศัพท์') {
+            navigate(`/luckyphone`)
         }
     };
 
@@ -29,4 +29,4 @@ const ContentList: React.FC = () => {
     );
 };
 
-export default ContentList;
+export default LuckyList;

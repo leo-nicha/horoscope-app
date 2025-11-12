@@ -1,24 +1,16 @@
 import React from 'react';
-import ContentItem from './ContentItem';
+import ContentItem from '../ContentItem';
 import { useNavigate } from "react-router-dom";
 
 const ContentList: React.FC = () => {
     const items = [
-        { title: 'วันเกิด', subtitle: 'ดูดวง', imageUrl: '/luckydays.jpg' },
-        { title: 'ราศี', subtitle: 'ดูดวง', imageUrl: '/luckywestzodiac.jpg' },
-        { title: 'ปีนักษัตร', subtitle: 'ดูดวง', imageUrl: '/luckycnzodiac.jpg' },
+        { title: 'เซียมซี', subtitle: 'เสี่ยงทาย', imageUrl: '/fortunesticks.jpg' },
     ];
 
     const navigate = useNavigate();
     const handleItemClick = (title: string) => {
-        if (title === 'วันเกิด') {
-            navigate(`/luckyday`)
-        }
-        if (title === 'ราศี') {
-            navigate(`/luckywestzodiac`)
-        }
-        if (title === 'ปีนักษัตร') {
-            navigate(`/luckycnzodiac`)
+        if (title === 'เซียมซี') {
+            navigate(`/fortunesticks`)
         }
     };
 

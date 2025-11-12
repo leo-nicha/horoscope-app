@@ -1,5 +1,5 @@
 import React from 'react';
-import ContentItem from './ContentItem';
+import ContentItem from '../ContentItem';
 import { useNavigate } from "react-router-dom";
 
 const ContentList: React.FC = () => {

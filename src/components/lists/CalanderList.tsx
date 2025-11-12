@@ -1,16 +1,16 @@
 import React from 'react';
-import ContentItem from './ContentItem';
+import ContentItem from '../ContentItem';
 import { useNavigate } from "react-router-dom";
 
-const ProphecyList: React.FC = () => {
+const CalanderList: React.FC = () => {
   const items = [
-    { title: 'ฝันเห็นสัตว์', subtitle: 'ทำนายฝัน', imageUrl: '/dreamanimal.jpg' },
+    { title: 'จันทรคติ', subtitle: 'วันพระ ข้างขึ้น ข้างแรม', imageUrl: '/moonage.png' },
   ];
 
   const navigate = useNavigate();
   const handleItemClick = (title: string) => {
-    if (title === 'ฝันเห็นสัตว์') {
-      navigate('/dreamanimal');
+    if (title === 'จันทรคติ') {
+      navigate('/moonage');
     }
   };
 
@@ -29,4 +29,4 @@ const ProphecyList: React.FC = () => {
   );
 };
 
-export default ProphecyList;
+export default CalanderList;

@@ -14,6 +14,7 @@ import DreamAnimal from './components/randomizers/DreamAnimal';
 import Lucky7Days from './components/Lucky7Days';
 import ChineseZodiac from './components/ChineseZodiac';
 import WesternZodiac from './components/WesternZodiac';
+import DestinyChart from './components/DestinyChart';
 
 const App: React.FC = () => {
   return (
@@ -33,6 +34,7 @@ const App: React.FC = () => {
         <Route path="/luckyday" element={<Lucky7Days />} />
         <Route path="/luckycnzodiac" element={<ChineseZodiac />} />
         <Route path="/luckywestzodiac" element={<WesternZodiac />} />
+        <Route path="/destinychart" element={<DestinyChart />} />
       </Routes>
     </div>
   );
