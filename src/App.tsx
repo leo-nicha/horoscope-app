@@ -8,7 +8,7 @@ import TarotStudy from './components/randomizers/TarotStudy';
 import TarotMoney from './components/randomizers/TarotMoney';
 import TarotHealth from './components/randomizers/TarotHealth';
 import MoonAge from './components/MoonAge';
-import FortuneSticks from './components/randomizers/FortuneSticks';
+import FortuneSticks from './components/FortuneSticks';
 import LuckyNumber from './components/LuckyNumber';
 import DreamAnimal from './components/randomizers/DreamAnimal';
 import Lucky7Days from './components/Lucky7Days';
@@ -16,6 +16,7 @@ import ChineseZodiac from './components/ChineseZodiac';
 import WesternZodiac from './components/WesternZodiac';
 import DestinyChart from './components/DestinyChart';
 import HouseFortune from './components/HouseFortune';
+import RuneFortune from './components/RuneFortune';
 
 const App: React.FC = () => {
   return (
@@ -37,6 +38,7 @@ const App: React.FC = () => {
         <Route path="/luckywestzodiac" element={<WesternZodiac />} />
         <Route path="/destinychart" element={<DestinyChart />} />
         <Route path="/luckyhouse" element={<HouseFortune />} />
+        <Route path="/runefortune" element={<RuneFortune />} />
       </Routes>
     </div>
   );

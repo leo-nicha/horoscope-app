@@ -4,14 +4,20 @@ import { useNavigate } from "react-router-dom";
 
 const ProphecyList: React.FC = () => {
   const items = [
-    { title: 'ฝันเห็นสัตว์', subtitle: 'ทำนายฝัน', imageUrl: '/dreamanimal.jpg' },
+    { title: 'อักษรรูน', subtitle: 'พยากรณ์', imageUrl: '/runestone.jpg' },
+    { title: 'สัตว์ในฝัน', subtitle: 'พยากรณ์', imageUrl: '/dreamanimal.jpg' },
+
   ];
 
   const navigate = useNavigate();
   const handleItemClick = (title: string) => {
-    if (title === 'ฝันเห็นสัตว์') {
+    if (title === 'อักษรรูน') {
+      navigate('/runefortune');
+    }
+    if (title === 'สัตว์ในฝัน') {
       navigate('/dreamanimal');
     }
+
   };
 
   return (
