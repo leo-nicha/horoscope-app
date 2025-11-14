@@ -17,6 +17,7 @@ import WesternZodiac from './components/WesternZodiac';
 import DestinyChart from './components/DestinyChart';
 import HouseFortune from './components/HouseFortune';
 import RuneFortune from './components/RuneFortune';
+import YamSamTar from './components/YamSamTar';
 
 const App: React.FC = () => {
   return (
@@ -39,6 +40,7 @@ const App: React.FC = () => {
         <Route path="/destinychart" element={<DestinyChart />} />
         <Route path="/luckyhouse" element={<HouseFortune />} />
         <Route path="/runefortune" element={<RuneFortune />} />
+        <Route path="/yamsamtar" element={<YamSamTar />} />
       </Routes>
     </div>
   );

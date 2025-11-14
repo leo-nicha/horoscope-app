@@ -2,7 +2,7 @@ import React from 'react';
 import ContentItem from '../ContentItem';
 import { useNavigate } from "react-router-dom";
 
-const ContentList: React.FC = () => {
+const HoroscopeList: React.FC = () => {
     const items = [
         { title: 'วันเกิด', subtitle: 'ดูดวง', imageUrl: '/luckydays.jpg' },
         { title: 'ราศี', subtitle: 'ดูดวง', imageUrl: '/luckywestzodiac.jpg' },
@@ -27,7 +27,7 @@ const ContentList: React.FC = () => {
     };
 
     return (
-        <div className="flex-1 bg-gray-100 p-2">
+        <div className=" w-full p-2 grid grid-cols-1 lg:grid-cols-3 lg:gap-4 justify-items-center mx-auto max-w-6xl">
             {items.map((item) => (
                 <ContentItem
                     key={item.title}
@@ -41,4 +41,4 @@ const ContentList: React.FC = () => {
     );
 };
 
-export default ContentList;
+export default HoroscopeList;

@@ -12,7 +12,7 @@ const HomeScreen: React.FC = () => {
         <Header />
       </div>
 
-      <main className="flex-1 overflow-y-auto mt-[220px] mb-2">
+      <main className="flex-1 overflow-y-auto mt-[90px] mb-2">
         <MainContent />
       </main>
       <BottomNav />

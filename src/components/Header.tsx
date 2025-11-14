@@ -1,5 +1,5 @@
 import React from 'react';
-import BannerSlider from './navigation/BannerSlider';
+// import BannerSlider from './navigation/BannerSlider';
 
 const Header: React.FC = () => {
   return (
@@ -9,9 +9,9 @@ const Header: React.FC = () => {
         <div></div>
       </nav>
 
-      <div>
+      {/* <div>
         {<BannerSlider />}
-      </div>
+      </div> */}
       <div className="p-2 text-sm text-gray-700 border-b border-gray-200 overflow-hidden">
         {/* - whitespace-nowrap: ไม่ให้ข้อความตกบรรทัด */}
         {/* - animate-[marquee_15s_linear_infinite]: คือการเรียกใช้ animation */}

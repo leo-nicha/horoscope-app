@@ -2,7 +2,7 @@ import React from 'react';
 import ContentItem from '../ContentItem';
 import { useNavigate } from "react-router-dom";
 
-const ContentList: React.FC = () => {
+const TarotList: React.FC = () => {
   const items = [
     { title: 'ดวงรายวัน', subtitle: 'ดูดวงไพ่ทาโรต์', imageUrl: '/dailytarot.jpg' },
     { title: 'ความรัก', subtitle: 'ดูดวงไพ่ทาโรต์', imageUrl: '/lovetarot.jpg' },
@@ -29,18 +29,19 @@ const ContentList: React.FC = () => {
   };
 
   return (
-    <div className="flex-1 bg-gray-100 p-2">
-      {items.map((item) => (
-        <ContentItem
-          key={item.title}
-          title={item.title}
-          subtitle={item.subtitle}
-          imageUrl={item.imageUrl}
-          onClick={() => handleItemClick(item.title)}
-        />
-      ))}
-    </div>
+      <div
+        className=" w-full p-2 grid grid-cols-1 lg:grid-cols-3 lg:gap-4 justify-items-center mx-auto max-w-6xl">
+        {items.map((item) => (
+          <ContentItem
+            key={item.title}
+            title={item.title}
+            subtitle={item.subtitle}
+            imageUrl={item.imageUrl}
+            onClick={() => handleItemClick(item.title)}
+          />
+        ))}
+      </div>
   );
 };
 
-export default ContentList;
+export default TarotList;

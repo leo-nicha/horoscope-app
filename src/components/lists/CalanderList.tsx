@@ -15,7 +15,7 @@ const CalanderList: React.FC = () => {
   };
 
   return (
-    <div className="flex-1 bg-gray-100 p-2">
+    <div className=" w-full p-2 grid grid-cols-1 lg:grid-cols-3 lg:gap-4 justify-items-center mx-auto max-w-6xl">
       {items.map((item) => (
         <ContentItem
           key={item.title}
